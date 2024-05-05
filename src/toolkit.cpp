@@ -581,6 +581,9 @@ void Toolkit::cb_put_plant()
     int row = choice_row->value() - 1;
     int col = choice_col->value() - 1;
     int type = choice_plant->value();
+    if(type >= 48){
+        type += 27;
+    }
     bool imitater = check_imitater->value();
     pvz->PutPlant(row, col, type, imitater);
 }
